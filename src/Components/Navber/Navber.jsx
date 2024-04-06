@@ -1,6 +1,17 @@
-import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Security/AuthProvider";
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+  console.log(user);
+
+  
+  // sign out a user
+  const handleLogOut = () => {
+    logOut().then().catch();
+    navigate("/");
+  };
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
@@ -17,7 +28,7 @@ const NavBar = () => {
     }
   };
   return (
-    <div className="navbar  bg-blue-700 text-white bg-opacity-75 backdrop-blur-lg p-5 rounded-md shadow-lg  lg:px-28 md:px-10 px-5  fixed z-50 top-0 border-b">
+    <div className="navbar bg-violet-800 text-white bg-opacity-75 backdrop-blur-lg p-5 rounded-md shadow-lg  lg:px-28 md:px-10 px-5  fixed z-50 top-0 border-b">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -54,11 +65,11 @@ const NavBar = () => {
             <li>
               <NavLink to={"/features"}>
                 <img
-                  className="h-8 w-10"
-                  src="https://i.ibb.co/yWWtzT4/1423045.png"
+                  className="h-8 w-8"
+                  src="https://i.ibb.co/L0CFmHv/pngtree-red-border-on-yellow-triangle-and-black-exclamation-mark-warning-sign-png-image-2316999-remo.png"
                   alt=""
                 />
-                Sports{" "}
+                Notice{" "}
               </NavLink>
             </li>
 
@@ -66,49 +77,38 @@ const NavBar = () => {
               <NavLink to={"/blog"}>
                 {" "}
                 <img
-                  className="h-8 w-10"
-                  src="https://i.ibb.co/wKzM2hg/live-live-transparent-live-icon-free-png.webp"
+                  className="h-8 w-8"
+                  src="https://i.ibb.co/hgDHfwD/5304-png-300-removebg-preview.png"
                   alt=""
                 />
-                Live
+                Exam
               </NavLink>
             </li>
             <li>
               <NavLink to={"/profile"}>
                 <img
-                  className="h-6 w-8"
-                  src="https://i.ibb.co/xMxqWvS/5930147.png"
+                  className="h-6 w-6"
+                  src="https://i.ibb.co/6Wz9JPS/images.png"
                   alt=""
                 />
-                1xGames{" "}
+                Assignment{" "}
               </NavLink>
             </li>
             <li>
               <NavLink to={"/profile"}>
                 <img
                   className="h-8 w-8"
-                  src="https://i.ibb.co/K95WZ10/Game-casino.webp"
+                  src="https://i.ibb.co/vsBYFmg/attendance-icon-18-removebg-preview.png"
                   alt=""
                 />
-                Casino{" "}
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink to={"/profile"}>
-                <img
-                  className="h-10 w-10"
-                  src="https://i.ibb.co/Zchg8LB/esport-2302875-1951442.webp"
-                  alt=""
-                />
-                ESports{" "}
+                Attendance{" "}
               </NavLink>
             </li>
           </ul>
         </div>
         <div className="flex justify-center items-center">
           <Link to={"/"}>
-            <h1>Live1xBet</h1>
+            <img className="h-32 w-36" src="https://i.ibb.co/TrX4Vvs/Multicolor-playful-children-art-school-logo-20240405-220208-0000-removebg-preview.png" alt="" />
           </Link>
         </div>
       </div>
@@ -128,53 +128,42 @@ const NavBar = () => {
           <li>
             <NavLink to={"/features"}>
               <img
-                className="h-6 w-8"
-                src="https://i.ibb.co/yWWtzT4/1423045.png"
+                className="h-6 w-6"
+                src="https://i.ibb.co/L0CFmHv/pngtree-red-border-on-yellow-triangle-and-black-exclamation-mark-warning-sign-png-image-2316999-remo.png"
                 alt=""
               />
-              Sports{" "}
+              Notice{" "}
             </NavLink>
           </li>
 
           <li>
             <NavLink to={"/profile"}>
               <img
-                className="h-6 w-8"
-                src="https://i.ibb.co/wKzM2hg/live-live-transparent-live-icon-free-png.webp"
+                className="h-6 w-6"
+                src="https://i.ibb.co/hgDHfwD/5304-png-300-removebg-preview.png"
                 alt=""
               />
-              Live{" "}
+              Exam{" "}
             </NavLink>
           </li>
           <li>
             <NavLink to={"/profile"}>
               <img
-                className="h-6 w-8"
-                src="https://i.ibb.co/xMxqWvS/5930147.png"
+                className="h-4 w-4"
+                src="https://i.ibb.co/6Wz9JPS/images.png"
                 alt=""
               />
-              1xGames{" "}
+              Assignment{" "}
             </NavLink>
           </li>
           <li>
             <NavLink to={"/profile"}>
               <img
                 className="h-8 w-8"
-                src="https://i.ibb.co/K95WZ10/Game-casino.webp"
+                src="https://i.ibb.co/vsBYFmg/attendance-icon-18-removebg-preview.png"
                 alt=""
               />
-              Casino{" "}
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink to={"/profile"}>
-              <img
-                className="h-10 w-10"
-                src="https://i.ibb.co/Zchg8LB/esport-2302875-1951442.webp"
-                alt=""
-              />
-              ESports{" "}
+              Attendance{" "}
             </NavLink>
           </li>
         </ul>
@@ -202,9 +191,71 @@ const NavBar = () => {
             <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
           </svg>
         </label>
+        {/* <Link to="/login">
+        <button className="btn p-4 rounded-lg">Login</button>
+        </Link> */}
 
-        <div className="items-center"></div>
+        <div className="items-center">
+          {user?.displayName ? (
+            <div className="dropdown center">
+              <label tabIndex={0}>
+                <div>
+                  <img
+                    className="h-10 w-10 rounded-full"
+                    src={user.photoURL}
+                    alt=""
+                  />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-lg dropdown-content mt-3  right-1  z-[1] p-2  rounded-box w-52"
+              >
+                <div className="dropdown ">
+                  <div
+                    tabIndex={0}
+                    className="dropdown-content z-[50] card card-compact w-44 p-2 shadow bg-base-100 border text-black"
+                  >
+                    <figure>
+                      <img
+                        className="h-20 w-20 rounded-full"
+                        src={user?.photoURL}
+                        alt=""
+                      />
+                    </figure>
+                    <div className="card-body ">
+                      <hr />
+
+                      <NavLink
+                        onClick={handleLogOut}
+                        className={({ isActive, isPending }) =>
+                          isPending
+                            ? "pending"
+                            : isActive
+                            ? "underline mr-5 text-blue-700"
+                            : "mr-5 hover:text-gray-100"
+                        }
+                      >
+                        <button className="btn btn-outline border-0 border-[#0165c3] hover:bg-[#0165c3] hover:border-[#0165c3] border-b-4 hover:text-white btn-sm">
+                          LogOut
+                        </button>
+                      </NavLink>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          ) : (
+            <Link to="/login">
+              <button className="font-avenir  px-3 py-1 bg-neutral rounded text-white">
+                Login
+              </button>
+            </Link>
+          )}
+        </div>
       </div>
+
+        
     </div>
   );
 };
