@@ -195,6 +195,7 @@ const NavBar = () => {
         <button className="btn p-4 rounded-lg">Login</button>
         </Link> */}
 
+
         <div className="items-center">
           {user?.displayName ? (
             <div className="dropdown center">
