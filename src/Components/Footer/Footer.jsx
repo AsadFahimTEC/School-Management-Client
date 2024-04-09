@@ -1,44 +1,210 @@
+import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { useRef } from "react";
+import PrivacyPolicy from "./PrivacyPolicy";
+import CookiesPolicy from "./CookiesPolicy";
+import TermsAndConditionsPage from "./TermsAndConditionsPage";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
+  const modalContentRef1 = useRef(null);
+  const modalContentRef2 = useRef(null);
+  const modalContentRef3 = useRef(null);
+  const showModalAndScrollToTop = () => {
+    // Show modal
+    const modal = document.getElementById("my_modal_1");
+    if (modal) {
+      modal.showModal();
+    }
+
+    // Scroll modal content to top
+    if (modalContentRef1.current) {
+      modalContentRef1.current.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const newShowModalAndScrollToTop = () => {
+    // Show modal
+    const modal = document.getElementById("my_modal_2");
+    if (modal) {
+      modal.showModal();
+    }
+
+    // Scroll modal content to top
+    if (modalContentRef2.current) {
+      modalContentRef2.current.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+  const newNewShowModalAndScrollToTop = () => {
+    // Show modal
+    const modal = document.getElementById("my_modal_3");
+    if (modal) {
+      modal.showModal();
+    }
+
+    // Scroll modal content to top
+    if (modalContentRef3.current) {
+      modalContentRef3.current.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
-      <footer className="footer p-10 bg-base-200 text-base-content">
-        <aside>
-          <svg
-            width="50"
-            height="50"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            className="fill-current"
-          >
-            <path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-          </svg>
-          <p>
-            ACME Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
-          </p>
+      <footer className="footer bg-violet-800 items-center  p-4 text-white border-t  ">
+        <aside style={{ width: "200px" }}>
+          <img
+            className="h-32 w-36 ml-20"
+            src="https://i.ibb.co/TrX4Vvs/Multicolor-playful-children-art-school-logo-20240405-220208-0000-removebg-preview.png"
+            alt=""
+          />
         </aside>
         <nav>
-          <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <header className="footer-title border-b-4 border-[#006bcb]">
+            Services
+          </header>
+
+          <Link
+            to={"/translate"}
+            className="link link-hover hover:translate-x-2"
+          >
+            Translate
+          </Link>
+          <Link to={"/contact"} className="link link-hover hover:translate-x-2">
+            Contact
+          </Link>
+          <Link
+            to={"/features"}
+            className="link link-hover hover:translate-x-2"
+          >
+            Features
+          </Link>
         </nav>
         <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <header className="footer-title border-b-4 border-[#006bcb]">
+            Company
+          </header>
+          <Link to="/getintuch" className="link link-hover hover:translate-x-2">
+            Get In Touch
+          </Link>
+          {/* <link className="link link-hover hover:translate-x-2">Contact</link> */}
+          <Link to="/aboutUs">
+            <button
+              className="font-avenir mr-10  rounded link link-hover hover:translate-x-2"
+              onClick={scrollToTop()}
+            >
+              About us
+            </button>
+          </Link>
+          <Link to="/meetTeam">
+            <button className="font-avenir mr-10  rounded link link-hover hover:translate-x-2">
+              Meet Our Team
+            </button>
+          </Link>
         </nav>
         <nav>
-          <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
+          <header className="footer-title border-b-4 border-[#006bcb]">
+            Legal
+          </header>
+          <button
+            className="hover:translate-x-2 link link-hover"
+            onClick={showModalAndScrollToTop}
+          >
+            Terms and Conditions
+          </button>
+          <dialog id="my_modal_1" className="modal">
+            <div className="modal-box" ref={modalContentRef1}>
+              <TermsAndConditionsPage></TermsAndConditionsPage>
+              <div className="modal-action">
+                <form method="dialog">
+                  <button className="btn bg-[#006bcb] text-white hover:bg-[#1659a6]">
+                    Close
+                  </button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+          <button
+            className="hover:translate-x-2 link link-hover"
+            onClick={newShowModalAndScrollToTop}
+          >
+            Privacy Policy
+          </button>
+          <dialog id="my_modal_2" className="modal">
+            <div className="modal-box" ref={modalContentRef2}>
+              <PrivacyPolicy></PrivacyPolicy>
+              <p className="py-4">
+                Press ESC key or click the button below to close
+              </p>
+              <div className="modal-action">
+                <form method="dialog">
+                  <button className="btn bg-[#006bcb] text-white hover:bg-[#1659a6]">
+                    Close
+                  </button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+          <button
+            className="hover:translate-x-2 link link-hover"
+            onClick={newNewShowModalAndScrollToTop}
+          >
+            Cookies Policy
+          </button>
+          <dialog id="my_modal_3" className="modal">
+            <div className="modal-box" ref={modalContentRef3}>
+              <CookiesPolicy></CookiesPolicy>
+              <div className="modal-action">
+                <form method="dialog">
+                  <button className="btn bg-[#006bcb] text-white hover:bg-[#1659a6]">
+                    Close
+                  </button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+        </nav>
+        <nav>
+          <header className="footer-title  border-b-4 border-[#006bcb]">
+            Social
+          </header>
+          <div className="grid grid-flow-col gap-4">
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="text-2xl hover:scale-150"></FaTwitter>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="https://youtube.com/"
+              target="_blank"
+            >
+              <FaYoutube className="text-2xl hover:scale-150"></FaYoutube>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="https://facebook.com/"
+              target="_blank"
+            >
+              <FaFacebook className="text-2xl hover:scale-150"></FaFacebook>
+            </a>
+          </div>
         </nav>
       </footer>
     </div>

@@ -1,7 +1,7 @@
 import './Slider.css';
 const Slider = () => {
   return (
-    <div className="mt-4">
+    <div className="mt-0 bg-violet-800">
       {/* Image Marquee */}
       <div className="marquee-container">
         <div className="marquee">

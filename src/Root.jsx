@@ -4,6 +4,8 @@ import Footer from "./Components/Footer/Footer";
 import Banner from "./Components/Banner/Banner";
 import Slider from "./Components/Slider/Slider";
 import OurSupport from "./Components/OurSupport/OurSupport";
+import Gallery from "./Components/Gallery/Gallery";
+import Weather from "./Components/Weather/Weather";
 
 
 const Root = () => {
@@ -13,9 +15,11 @@ const Root = () => {
             <Banner></Banner>
             <Slider></Slider>
             <OurSupport></OurSupport>
-           <div className="min-h-screen">
+            <Gallery></Gallery>
+            <Weather></Weather>
+           {/* <div className="min-h-screen">
            <Outlet></Outlet>
-           </div>
+           </div> */}
             <Footer></Footer>
         </div>
     );
