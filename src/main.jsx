@@ -9,7 +9,7 @@ import "./index.css";
 import Root from "./Root";
 import Login from "./Security/Login";
 import AuthProvider from "./Security/AuthProvider";
-
+import PrivateRoute from "./Security/PrivateRoute";
 import Register from "./Security/Register";
 import Notice from "./Components/Notice/Notice";
 import Exam from "./Components/Exam/Exam";
@@ -31,19 +31,35 @@ const router = createBrowserRouter([
   },
   {
     path: "/notice",
-    element: <Notice></Notice>
+    element: (
+    <PrivateRoute>
+    <Notice></Notice>
+    </PrivateRoute>
+    ),
   },
   {
     path: "/exam",
-    element: <Exam></Exam>
+    element: (
+      <PrivateRoute>
+    <Exam></Exam>
+    </PrivateRoute>
+    ),
   },
   {
     path: "/assignment",
-    element: <Assignment></Assignment>
+    element: (
+      <PrivateRoute>
+    <Assignment></Assignment>
+    </PrivateRoute>
+    ),
   },
   {
     path: "/attendance",
-    element: <Attendance></Attendance>
+    element: (
+      <PrivateRoute>
+    <Attendance></Attendance>
+    </PrivateRoute>
+    ),
   }
 
 ]);
