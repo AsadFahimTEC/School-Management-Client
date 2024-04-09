@@ -63,7 +63,7 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/features"}>
+              <NavLink to={"/notice"}>
                 <img
                   className="h-8 w-8"
                   src="https://i.ibb.co/L0CFmHv/pngtree-red-border-on-yellow-triangle-and-black-exclamation-mark-warning-sign-png-image-2316999-remo.png"
@@ -74,7 +74,7 @@ const NavBar = () => {
             </li>
 
             <li>
-              <NavLink to={"/blog"}>
+              <NavLink to={"/exam"}>
                 {" "}
                 <img
                   className="h-8 w-8"
@@ -85,7 +85,7 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/profile"}>
+              <NavLink to={"/assignment"}>
                 <img
                   className="h-6 w-6"
                   src="https://i.ibb.co/6Wz9JPS/images.png"
@@ -95,7 +95,7 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/profile"}>
+              <NavLink to={"/attendance"}>
                 <img
                   className="h-8 w-8"
                   src="https://i.ibb.co/vsBYFmg/attendance-icon-18-removebg-preview.png"
@@ -126,7 +126,7 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/features"}>
+            <NavLink to={"/notice"}>
               <img
                 className="h-6 w-6"
                 src="https://i.ibb.co/L0CFmHv/pngtree-red-border-on-yellow-triangle-and-black-exclamation-mark-warning-sign-png-image-2316999-remo.png"
@@ -137,7 +137,7 @@ const NavBar = () => {
           </li>
 
           <li>
-            <NavLink to={"/profile"}>
+            <NavLink to={"/exam"}>
               <img
                 className="h-6 w-6"
                 src="https://i.ibb.co/hgDHfwD/5304-png-300-removebg-preview.png"
@@ -147,7 +147,7 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/profile"}>
+            <NavLink to={"/assignment"}>
               <img
                 className="h-4 w-4"
                 src="https://i.ibb.co/6Wz9JPS/images.png"
@@ -157,7 +157,7 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={"/profile"}>
+            <NavLink to={"/attendance"}>
               <img
                 className="h-8 w-8"
                 src="https://i.ibb.co/vsBYFmg/attendance-icon-18-removebg-preview.png"

@@ -11,6 +11,10 @@ import Login from "./Security/Login";
 import AuthProvider from "./Security/AuthProvider";
 
 import Register from "./Security/Register";
+import Notice from "./Components/Notice/Notice";
+import Exam from "./Components/Exam/Exam";
+import Assignment from "./Components/Assignment/Assignment";
+import Attendance from "./Components/Attendance/Attendance";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +28,22 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register></Register>
+  },
+  {
+    path: "/notice",
+    element: <Notice></Notice>
+  },
+  {
+    path: "/exam",
+    element: <Exam></Exam>
+  },
+  {
+    path: "/assignment",
+    element: <Assignment></Assignment>
+  },
+  {
+    path: "/attendance",
+    element: <Attendance></Attendance>
   }
 
 ]);
