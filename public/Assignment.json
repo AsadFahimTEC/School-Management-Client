@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "title": "Assignment 1",
+      "description": "This assignment requires you to write an essay on a topic. You are free to make changes as per your convenience."
+    },
+    {
+      "id": 2,
+      "title": "Assignment 2",
+      "description": "In this assignment, you will provide a description of a picture. You will be given permission to provide all the descriptions for picture assessment."
+    },
+    {
+      "id": 3,
+      "title": "Assignment 3",
+      "description": "This assignment requires you to provide a brief description of a video. You can contribute to improving your understanding through this assignment."
+    },
+    {
+      "id": 4,
+      "title": "Assignment 4",
+      "description": "Write a short story based on a given prompt. Focus on character development and plot structure."
+    },
+    {
+      "id": 5,
+      "title": "Assignment 5",
+      "description": "Analyze a poem of your choice. Identify key themes, literary devices, and provide critical insights."
+    },
+    {
+      "id": 6,
+      "title": "Assignment 6",
+      "description": "Prepare a persuasive essay arguing for or against a contemporary social issue. Support your argument with evidence and logical reasoning."
+    },
+    {
+      "id": 7,
+      "title": "Assignment 7",
+      "description": "Solve a set of algebraic equations involving linear and quadratic expressions. Focus on using appropriate methods and techniques to find solutions."
+    },
+    {
+      "id": 8,
+      "title": "Assignment 8",
+      "description": "Apply geometric principles to solve problems involving triangles, circles, and polygons. Use theorems and formulas to justify your solutions."
+    },
+    {
+      "id": 9,
+      "title": "Assignment 9",
+      "description": "Explore real-world applications of calculus concepts such as derivatives and integrals. Analyze functions and their rates of change in various contexts."
+    }
+  ]
+  

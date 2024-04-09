@@ -1,0 +1,51 @@
+.attendance-container {
+    text-align: center;
+  }
+  
+  .attendance-content {
+    margin-top: 24px;
+  }
+  
+  .attendance-heading {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .attendance-buttons {
+    margin-top: 20px;
+  }
+  
+  .present-button,
+  .absent-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .present-button {
+    background-color: #28a745; /* Green color */
+    color: #fff; /* White text */
+  }
+  
+  .absent-button {
+    background-color: #dc3545; /* Red color */
+    color: #fff; /* White text */
+  }
+  
+  .attendance-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .attendance-list li {
+    margin-bottom: 5px;
+  }
+  
+  .attendance-list li strong {
+    font-weight: bold;
+  }
+  

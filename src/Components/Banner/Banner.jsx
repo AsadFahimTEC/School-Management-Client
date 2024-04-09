@@ -3,7 +3,7 @@ import Typewriter from "react-text-writer";
 import { TypeAnimation } from "react-type-animation";
 const Banner = () => {
   return (
-    <div className="mt-8 bg-violet-800">
+    <div className="mt-16 bg-violet-800">
       <section className="z-0 h-[700px] text-green-200 pt-10  lg:mt-0 md:mt-10">
         <div className="container mt-10 flex flex-col p-5  justify-center items-center  mx-auto sm:py-12 lg:py-24 lg:flex-row md:flex-row lg:justify-between">
           <div className="flex flex-col  justify-center text-center rounded-sm lg:max-w-md md:max-w-xs xl:max-w-lg lg:text-left">

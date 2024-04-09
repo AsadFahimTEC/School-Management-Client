@@ -1,0 +1,26 @@
+.exam-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.exam-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.exam-content {
+    text-align: center;
+}
+
+.exam-content h3 {
+    margin-bottom: 10px;
+}
+
+.exam-content p {
+    font-size: 14px;
+    color: #666;
+}

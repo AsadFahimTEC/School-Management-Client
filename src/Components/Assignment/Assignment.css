@@ -1,0 +1,33 @@
+.assignment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .assignment-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .assignment-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .assignment-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .assignment-description {
+    font-size: 1rem;
+  }
+  

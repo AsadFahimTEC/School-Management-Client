@@ -3,6 +3,7 @@ import axios from "axios";
 import NavBar from "../Navber/Navber";
 import { toast } from "react-hot-toast";
 import "./Notice.css";
+import Footer from "../Footer/Footer";
 
 const Notice = () => {
   const [notices, setNotices] = useState([]);
@@ -150,6 +151,7 @@ const Notice = () => {
           )}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
